@@ -1,0 +1,54 @@
+
+.item-card{
+    display: flex;
+    flex-direction: column;
+    .item-body{
+        border-right: 1px solid $second;
+        border-left: 1px solid $second;
+    }
+    a{
+        font-size: 24px;
+        color: $main;
+        font-weight: bolder;
+    }
+}
+
+.item-image{
+    height: 315px;
+    position: relative;
+    @include bg_center_norepeat;
+    background-size: cover;
+    .item-tag{
+        position: absolute;
+        top: 0;
+        left: 20px;
+        background-color: $main;
+        writing-mode: vertical-lr;
+        letter-spacing: 5px;
+        color: white;
+        padding: 10px 5px 10px 5px;
+    }
+    .item-mark{
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        font-size: 20px;
+        color: $main;
+        cursor: pointer;
+    }
+}
+
+.item-name{
+    border-right: 1px solid $second;
+}
+
+
+.item-name,.item-price{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color:$main;
+    font-size: 20px;
+}
+
+

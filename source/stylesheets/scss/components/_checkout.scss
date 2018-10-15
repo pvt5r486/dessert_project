@@ -1,0 +1,213 @@
+.form-block{
+    background: $main;
+    color:white;
+    padding: 30px 40px 30px 40px;
+    label{
+        font-size: 20px;
+        margin-bottom: 8px;
+        font-weight: bolder;
+    }
+}
+
+.form-control-size{
+    font-size: 16px;
+    padding: 10px 10px 10px 20px;
+    height: 56px !important;
+    line-height: 56px;
+    border: none;
+    &.have-r-icon{
+        padding: 10px 45px 10px 20px;
+    }
+}
+
+.form-icon{
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    color: $main;
+    width: 20px;
+    transform: translateY(-50%);
+}
+
+.form-block-title{
+    margin-bottom: 0px;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.linkgroup{
+    display: flex;
+    a{
+        display: block;
+        width: 50%;
+        height: 56px;
+        background-color: $main;
+        color:  $second;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        line-height: 56px;
+        border: 1px solid $second;
+        transition: all .3s;
+        text-decoration: none !important;
+        &.active, &:hover,&:focus{
+            color:  $main;
+            background-color: $second;
+        }
+    }
+}
+
+.process-steps{
+    $circle-size:20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    .step-circle{
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: $circle-size;
+        border: 1px solid $dontcare;
+        background: $main;
+        position: relative;
+        z-index: 1;
+        &.active{
+            border-color: $second;
+            &:after{
+                content: "";
+                height: $circle-size - 6;
+                width: $circle-size - 6;
+                display: block;
+                background-color: $second;
+                border-radius: $circle-size;
+                margin: 2px;
+            }
+        }
+        &.done{
+            background-color: $second;
+            color: $main;
+            &:after{
+                content: "check";
+                font-family: 'Material Icons';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 16px;
+                line-height: 1;
+                letter-spacing: normal;
+                text-transform: none;
+                display: inline-block;
+                white-space: nowrap;
+                word-wrap: normal;
+                direction: ltr;
+                margin: 1px;
+                font-weight: bolder;
+            }
+        }
+        &.done-lightmode{
+            background-color: $main;
+            color: $second;
+            &:after{
+                content: "check";
+                font-family: 'Material Icons';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 16px;
+                line-height: 1;
+                letter-spacing: normal;
+                text-transform: none;
+                display: inline-block;
+                white-space: nowrap;
+                word-wrap: normal;
+                direction: ltr;
+                margin: 1px;
+                font-weight: bolder;
+            }
+        }
+
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: $dontcare;
+    }
+}
+
+
+
+.process-steps-container{
+    width: 190px;
+}
+
+.next-btn{
+    @include btn;
+}
+
+.shopping-listbox{
+    margin-top: 20px;
+    border: 1px solid $second;
+}
+
+.shopping-listbox-title{
+    display: block;
+    height: 65px;
+    line-height: 65px;
+    background: $second;
+    color: $dontcare;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.listbox{
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.listbox-item-img{
+    width: 120px;
+    height: 80px;
+    @include bg_center_norepeat;
+    background-size: cover;
+    margin-right: 20px;
+}
+
+.listbox-item-price{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.listbox-item-name,.listbox-item-price{
+    display: block;
+    color:$dontcare;
+}
+
+.pay-success-bg{
+    height: 460px;
+    @include bg_center_norepeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buymore-btn{
+    @include btn;
+    @include media-breakpoint-up(md) {
+        width: 300px;
+    }
+}
