@@ -1,18 +1,15 @@
 // 客製bs4.1.1
 // 必須
 @import "../bootstrap/scss/functions";
-@import "components/variables";
+@import "pages/variables";
 @import "../bootstrap/scss/mixins";
-
-
-//可選元件
+//可選
 @import "../bootstrap/scss/buttons";
 @import "../bootstrap/scss/button-group";
 @import "../bootstrap/scss/navbar";
 @import "../bootstrap/scss/transitions";
 @import "../bootstrap/scss/images";
 @import "../bootstrap/scss/forms";
-
 // 可選通用類別
 @import "../bootstrap/scss/reboot";
 @import "../bootstrap/scss/grid";
@@ -28,24 +25,28 @@ label{
     margin-bottom: 0;
 }
 
+ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
 //移除 input type = number 時的小箭頭
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button{
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
     -webkit-appearance: none !important;
     margin: 0; 
 }
 
-//手刻元件
+//components
 @import "components/mytool";
 @import "components/item-card";
 
 //共同區塊
-@import "components/layout";
-
-//
-@import "components/index";
-@import "components/product";
-@import "components/login";
-@import "components/shopcart";
-@import "components/checkout";
+@import "pages/layout";
+//pages
+@import "pages/index";
+@import "pages/product";
+@import "pages/login";
+@import "pages/shopcart";
+@import "pages/checkout";
 

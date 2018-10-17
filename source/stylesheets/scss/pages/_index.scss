@@ -1,0 +1,105 @@
+.header-bglogo{
+    height: 496px;
+    @include bg_center_norepeat;
+    background-size: cover;
+    position: relative;
+    z-index: -999;
+}
+
+.specialmenu{
+    margin-top: 0px;
+    @include media-breakpoint-up(md) {
+        margin-top: -90px;
+        margin-bottom: 80px;
+    }
+}
+
+.specialmenu-image{
+    display: flex;
+    height: 256px;
+    writing-mode: vertical-lr;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bolder;
+    text-decoration: none !important;
+    overflow: hidden;
+    transition: color .5s;
+    & + .specialmenu-image{
+        border-left: 1px solid white;
+    }
+    &:hover,&:focus,&.active{
+        color: $main;
+        .specialmenu-bg-cover{
+            filter: blur(0);
+        }
+        .specialmenu-bg-mask{
+            background-color: rgba($becare,.8);
+        }
+    }
+}
+
+.specialmenu-bg-mask{
+    background-color: rgba($main,.8);
+    transition: background-color .5s;
+    @include four_sides;
+    z-index: -1;
+}
+
+.specialmenu-bg-cover{
+    @include four_sides;
+    @include bg_center_norepeat;
+    background-size: cover;
+    top: -100px;
+    right: -100px;
+    bottom: -100px;
+    left: -100px;
+    filter: blur(5px);
+    transition: filter .5s;
+    z-index: -2;
+}
+
+
+.bg-second{
+    background-color: $second;
+}
+
+.section{
+    .section-bg-image{
+        min-height: 250px;
+        @include bg_center_norepeat;
+        background-size: cover;
+    }
+
+    .vertical-content{
+        max-height: 420px;
+        line-height: 2.0;
+        @include media-breakpoint-up(md) {
+            line-height: 2.5;
+        }
+    }
+
+     //營造內凹效果
+    .vertical-block{  
+        @include media-breakpoint-up(md) {
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+    }
+}
+
+
+.eatslogan{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include media-breakpoint-up(md) {
+        padding-top: 95px;
+        padding-bottom: 80px;
+    }
+
+}
+
